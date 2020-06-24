@@ -61,7 +61,8 @@ module Greenlight
       ENV["BIGBLUEBUTTON_SECRET"]
     else
       config.bigbluebutton_secret_default
-    end
+                                  end
+    config.bigbluebutton_stylesheet = ENV["BIGBLUEBUTTON_STYLESHEET"]
 
     # Fix endpoint format if required.
     config.bigbluebutton_endpoint += "/" unless config.bigbluebutton_endpoint.ends_with?('/')

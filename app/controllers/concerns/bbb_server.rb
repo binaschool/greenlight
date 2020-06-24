@@ -55,6 +55,10 @@ module BbbServer
     join_opts[:userID] = uid if uid
     join_opts[:join_via_html5] = true
 
+    if Rails.configuration.bigbluebutton_stylesheet
+      join_opts[:"userdata-bbb_custom_style_url"] = Rails.configuration.bigbluebutton_stylesheet
+    end
+
     bbb_server.join_meeting_url(room.bbb_id, name, password, join_opts)
   end
 
