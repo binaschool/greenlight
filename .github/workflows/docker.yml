@@ -20,3 +20,4 @@ jobs:
           registry: docker.pkg.github.com
           repository: binaschool/greenlight/greenlight
           tag_with_sha: true
+          tag: latest
